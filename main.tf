@@ -13,7 +13,8 @@ terraform {
   }
 
   backend "kubernetes" {
-    secret_suffix    = "state"
-    config_path      = "/etc/rancher/k3s/k3s.yaml"
+    config_path   = "/etc/rancher/k3s/k3s.yaml"
+    secret_suffix = "production"
+    namespace     = "platform-cicd"
   }
 }
